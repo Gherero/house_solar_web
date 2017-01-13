@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="913160be-8a94-4f6e-a45e-0ba7e735ec84" name="opi" url="http://192.168.1.160">
+        <fileTransfer host="192.168.1.160" port="22" rootFolder="/var/www/house_solar_web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
