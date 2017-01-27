@@ -1,5 +1,12 @@
 from flask import Flask, render_template
+
 app = Flask(__name__)
+
+from peewee import *
+
+db = SqliteDatabase('house.db')
+
+
 
 @app.route('/')
 def hello_world():
@@ -20,7 +27,9 @@ def test():
 
 @app.route('/test2')
 def test2():
-    return (render_template('test2.html'))
+
+    batt_contr.select().order_by(batt_contr.id.desc()).get()
+    return render_template('test2.html')
 
 @app.route('/test3')
 def test3():
@@ -28,5 +37,3 @@ def test3():
 
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug='True',port=80)
